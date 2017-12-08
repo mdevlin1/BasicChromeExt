@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "Ctrl-click-navigate",
+  "description": "This extension will go to the page you ctrl-clicked",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab"
+   ]
+}
