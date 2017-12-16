@@ -1,15 +1,25 @@
 {
   "manifest_version": 2,
 
-  "name": "Ctrl-click-navigate",
-  "description": "This extension will go to the page you ctrl-clicked",
+  "name": "GoogleFu Helper",
+  "description": "Makes it easy to use advanced Google search arguments",
   "version": "1.0",
 
-  "browser_action": {
-   "default_icon": "icon.png",
-   "default_popup": "popup.html"
+  "icons": {
+    "48": "icon.png"
   },
+
   "permissions": [
-   "activeTab"
-   ]
+    "tabs", "<all_urls>"
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": ["popup.js"],
+    "persistent": false
+  }
 }
