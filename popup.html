@@ -1,18 +1,59 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<script type="text/javascript" src="popup.js"></script>
-<script type="text/javascript" src="accord.js"></script>
-<link rel="stylesheet" text="text/css" href="style.css">
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
 <body>
+  <div class="add">
     <button class="accordion">Add Query</button>
-	<div class="panel">
-  	<form>
-        <b>General Search Keywords: </b><br>
-        <input type="text" name="keywords"><br>
-        <b>Quoted Keywords</b><br>
-        <input type="text" name="keywords"><br>
+    <div class="panel">
+    <form>
+    <ul class="form-style-1">
+      <li>
+        <ul class="form-style-1">
+          <li class="label-divided" margin-right: 120px;>
+            <label>Key Words</label>
+            <input type="text" name="field1" placeholder="Search" />
+          </li>
+          <li class="label-divided">
+            <label>Quote</label>
+            <input type="text" name="field2" placeholder="Search" />
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul class="form-style-1" margin-right: 160px;>
+          <li class="label-divided">
+            <label>Location</label>
+            <input type="text" name="field1" placeholder="Search" />
+          </li>
+          <li class="label-divided">
+            <label>File Type</label>
+            <input type="text" name="field2" placeholder="Search" />
+          </li>
+        </ul>
+      </li>
+      <li>
         <input type="submit" value="Submit">
+      </li>
+    </ul>
     </form>
-	</div>
+    </div>
+  </div>
+
+  <div class="desc">
+    <button class="accordion">Current Queries</button>
+    <div class="panel">
+    <ul class="form-style-1">
+      <li>
+        <label>Description: </label>
+      </li>
+    </ul>
+    </div>
+  </div>
+  <form>
+    <button class="search">Search All</button>
+  </form>
+<script type="text/javascript" src="accord.js"></script>
 </body>
 </html>

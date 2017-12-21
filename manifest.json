@@ -21,9 +21,5 @@
     "background": {
         "scripts": ["popup.js"],
         "persistent": false
-    },
-
-    "content_scripts": {
-        "js" : ["contentscript.js", "254195.user.js"]
     }
 }
