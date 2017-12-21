@@ -6,7 +6,7 @@ var http = require("http"),
 http.createServer( function( request, response ) {
     var filePath = '.' + request.url;
     if (filePath == './')
-        filePath = './popup.html';
+        filePath = './query.html';
 
     var extname = path.extname(filePath);
     var contentType = 'text/html';

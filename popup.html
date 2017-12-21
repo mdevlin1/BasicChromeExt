@@ -7,36 +7,30 @@
   <div class="add">
     <button class="accordion">Add Query</button>
     <div class="panel">
-    <form>
-    <ul class="form-style-1">
+    <form onsubmit="addq()">
+      <ul class="form-style-1">
       <li>
-        <ul class="form-style-1">
-          <li class="label-divided" margin-right: 120px;>
-            <label>Key Words</label>
-            <input type="text" name="field1" placeholder="Search" />
-          </li>
-          <li class="label-divided">
-            <label>Quote</label>
-            <input type="text" name="field2" placeholder="Search" />
-          </li>
-        </ul>
+        <label>Key Words</label>
+        <input type="text" name="field1" placeholder="Search" size="52px">
       </li>
-      <li>
-        <ul class="form-style-1" margin-right: 160px;>
-          <li class="label-divided">
-            <label>Location</label>
-            <input type="text" name="field1" placeholder="Search" />
-          </li>
-          <li class="label-divided">
-            <label>File Type</label>
-            <input type="text" name="field2" placeholder="Search" />
-          </li>
-        </ul>
-      </li>
-      <li>
-        <input type="submit" value="Submit">
-      </li>
-    </ul>
+      <div class="holder">
+      </div>
+      </ul>
+      <label>Add aditional operators</label>
+      <select name="type" id="test">
+        <option value="loc">Location</option>
+        <option value="site">Site</option>
+        <option value="define">Definition</option>
+        <option value="plus">Synonyms</option>
+        <option value="ftype">File Type</option>
+        <option value="movie">Movie</option>
+        <option value="phone">Phonebook</option>
+        <option value="weather">Weather</option>
+        <option value="stock">Stocks</option>
+        <option value="ip">IP address</option>
+        <option value="lan">Language</option>
+      </select>
+      <input type="submit" value="Add">
     </form>
     </div>
   </div>
@@ -55,5 +49,16 @@
     <button class="search">Search All</button>
   </form>
 <script type="text/javascript" src="accord.js"></script>
+<script>
+function addq() {
+  var type = document.getElementById("test").submit();
+  var currentDiv = document.getElementById("holder");
+  var newDiv = document.createElement("div");
+  var newCont = document.createTextNode("<li><label>"+type+"</label>
+        <input type='text' name='field2' placeholder='Search'>;</li>");
+  newDiv.appendChild(newCont);
+  document.body.insertBefore(newDiv, currentDiv);
+}
+</script>
 </body>
 </html>
