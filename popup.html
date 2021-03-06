@@ -1,64 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="style.css"> 
-</head>
-<body>
-  <div class="add">
-    <button class="accordion">Add Query</button>
-    <div class="panel">
-    <form onsubmit="addq()">
-      <ul class="form-style-1">
-      <li>
-        <label>Key Words</label>
-        <input type="text" name="field1" placeholder="Search" size="52px">
-      </li>
-      <div class="holder">
-      </div>
-      </ul>
-      <label>Add aditional operators</label>
-      <select name="type" id="test">
-        <option value="loc">Location</option>
-        <option value="site">Site</option>
-        <option value="define">Definition</option>
-        <option value="plus">Synonyms</option>
-        <option value="ftype">File Type</option>
-        <option value="movie">Movie</option>
-        <option value="phone">Phonebook</option>
-        <option value="weather">Weather</option>
-        <option value="stock">Stocks</option>
-        <option value="ip">IP address</option>
-        <option value="lan">Language</option>
-      </select>
-      <input type="submit" value="Add">
-    </form>
-    </div>
-  </div>
+  <head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css"> 
+  </head>
+  <body>
+    <div class="add">
+      <button class="accordion">Add Query</button>
+      <div class="panel">
+        <form onsubmit="addQuery()">
 
-  <div class="desc">
-    <button class="accordion">Current Queries</button>
-    <div class="panel">
-    <ul class="form-style-1">
-      <li>
-        <label>Description: </label>
-      </li>
-    </ul>
+          <ul class="form-style-1">
+          <li>
+            <label>Key Words</label>
+            <input type="text" name="field1" placeholder="Search" size="52px">
+          </li>
+
+          </ul>
+          <label>Add aditional operators</label>
+          <select name="type" id="test">
+            <option value="loc">Location</option>
+            <option value="site">Site</option>
+            <option value="define">Definition</option>
+            <option value="plus">Synonyms</option>
+            <option value="ftype">File Type</option>
+            <option value="movie">Movie</option>
+            <option value="phone">Phonebook</option>
+            <option value="weather">Weather</option>
+            <option value="stock">Stocks</option>
+            <option value="ip">IP address</option>
+            <option value="lan">Language</option>
+          </select>
+
+          <input type="submit" value="Search">
+
+        </form>
+      </div>
     </div>
-  </div>
-  <form>
-    <button class="search">Search All</button>
-  </form>
-<script type="text/javascript" src="accord.js"></script>
-<script>
-function addq() {
-  var type = document.getElementById("test").submit();
-  var currentDiv = document.getElementById("holder");
-  var newDiv = document.createElement("div");
-  var newCont = document.createTextNode("<li><label>"+type+"</label>
-        <input type='text' name='field2' placeholder='Search'>;</li>");
-  newDiv.appendChild(newCont);
-  document.body.insertBefore(newDiv, currentDiv);
-}
-</script>
-</body>
+
+    <script type="text/javascript" src="javascript/accord.js"></script>
+    <script type="text/javascript" src="javascript/popup.js"></script>
+  </body>
 </html>

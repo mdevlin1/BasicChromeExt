@@ -6,7 +6,7 @@
     "version": "1.0",
 
     "icons": {
-        "48": "icon.png"
+        "48": "assets/icon.png"
     },
 
     "permissions": [
