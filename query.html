@@ -1,47 +1,58 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-<link rel="stylesheet" text="text/css" href="style.css">
-<script>
-function test() {
-  document.write("Hello");
-  return;
-}
-</script>
-</head>
-<body>
-<div id="holder">
-</div>
-<form onsubmit="return test()">
-<ul class="form-style-1">
-  <li>
-    <ul class="form-style-1">
-      <li class="label-divided" margin-right: 120px;>
-        <label>Key Words</label>
-        <input id="test" type="text" name="field1" placeholder="Search" />
-      </li>
-      <li class="label-divided">
-        <label>Quote</label>
-        <input type="text" name="field2" placeholder="Search" />
-      </li>
-    </ul>
-  </li>
-  <li>
-    <ul class="form-style-1" margin-right: 160px;>
-      <li class="label-divided">
-        <label>Location</label>
-        <input type="text" name="field1" placeholder="Search" />
-      </li>
-      <li class="label-divided">
-        <label>File Type</label>
-        <input type="text" name="field2" placeholder="Search" />
-      </li>
-    </ul>
-  </li>
-  <li>
-    <input type="submit" value="Submit">
-  </li>
-</ul>
-</form>
-</body>
+  <head>
+    <link rel="stylesheet" text="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="holder">
+    </div>
+    <form onsubmit="return test()">
+      <ul class="form-style-1">
+        <li>
+          <ul class="form-style-1">
+            <li class="label-divided">
+              <button id="keywordButton" class="plus-button"></button>
+            </li>
+            <li class="label-divided" margin-right: 120px;>
+              <label>Key Words</label>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="form-style-1">
+            <li class="label-divided">
+              <button id="quoteButton" class="plus-button"></button>
+            </li>
+            <li class="label-divided" margin-right: 120px;>
+              <label>Quote</label>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="form-style-1">
+            <li class="label-divided">
+              <button id="locationButton" class="plus-button"></button>
+            </li>
+            <li class="label-divided" margin-right: 120px;>
+              <label>Location</label>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="form-style-1">
+            <li class="label-divided">
+              <button id="fileTypeButton" class="plus-button"></button>
+            </li>
+            <li class="label-divided" margin-right: 120px;>
+              <label>File Type</label>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <input type="submit" value="Submit">
+        </li>
+      </ul>
+    </form>
+  </body>
 </html>
